@@ -9,22 +9,34 @@ type User = {
     email: string;
 };
 
+type Status = "todo" | "doing" | "done";
+
 type Task = {
     _id: string;
     title: string;
     description: string;
-    status: "todo" | "doing" | "done";
+    status: Status;
     creator: User;
     assignedUser: User | null;
 };
 
 type BoardColumnProps = {
-    id: Task["status"];
+    id: Status;
     title: string;
     tasks: Task[];
 };
 
-const columnStyles = {
+const columnStyles: Record<
+    Status,
+    {
+        container: string;
+        header: string;
+        count: string;
+        dot: string;
+        over: string;
+        empty: string;
+    }
+> = {
     todo: {
         container: "bg-indigo-50/70 border-indigo-100",
         header: "text-indigo-950",
@@ -73,7 +85,6 @@ export default function BoardColumn({
                     : styles.container
             }`}
         >
-        
             <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                     <span

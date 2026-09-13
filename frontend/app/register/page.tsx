@@ -74,9 +74,6 @@ export default function RegisterPage() {
         <main className="min-h-screen bg-slate-950">
             <div className="grid min-h-screen md:grid-cols-2">
 
-                {/* =========================
-                    IMAGE SECTION
-                ========================== */}
                 <section
                     className="relative order-1 h-[38vh] min-h-[260px] overflow-hidden bg-cover bg-center sm:h-[42vh] md:order-1 md:h-screen"
                     style={{
@@ -84,13 +81,11 @@ export default function RegisterPage() {
                             "url('https://images.stockcake.com/public/3/e/5/3e5df37e-2e3d-4603-a575-8e0924254c5e_large.jpg')",
                     }}
                 >
-                    {/* Image overlay */}
+                 
                     <div className="absolute inset-0 bg-slate-950/40" />
 
-                    {/* Soft gradient */}
                     <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
-                    {/* Brand */}
                     <div className="absolute left-5 top-5 sm:left-8 sm:top-8">
                         <div className="flex items-center gap-3">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-sm font-bold text-white backdrop-blur-md">
@@ -109,12 +104,10 @@ export default function RegisterPage() {
                         </div>
                     </div>
 
-                    {/* Top-right pill */}
                     <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-black/20 px-3 py-2 text-xs font-medium text-white backdrop-blur-md sm:right-8 sm:top-8">
                         New workspace
                     </div>
 
-                    {/* Quote */}
                     <div className="absolute bottom-7 left-5 right-5 sm:bottom-10 sm:left-8 sm:right-8">
                         <div className="max-w-xl text-white">
                             <p className="text-xl font-semibold leading-relaxed sm:text-2xl lg:text-3xl">
@@ -134,13 +127,9 @@ export default function RegisterPage() {
                     </div>
                 </section>
 
-                {/* =========================
-                    REGISTER SECTION
-                ========================== */}
                 <section className="order-2 flex min-h-0 items-start justify-center bg-white px-6 py-10 sm:px-10 sm:py-12 md:order-2 md:min-h-screen md:items-center md:px-12 lg:px-20">
                     <div className="w-full max-w-md">
 
-                        {/* Mobile brand */}
                         <div className="mb-8 flex items-center gap-3 md:hidden">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-sm font-bold text-white">
                                 LT
@@ -157,7 +146,6 @@ export default function RegisterPage() {
                             </div>
                         </div>
 
-                        {/* Intro */}
                         <div className="mb-8">
                             <div className="mb-4 inline-flex items-center rounded-full bg-slate-100 px-3 py-1.5 text-xs font-medium text-slate-600">
                                 Get started
@@ -173,7 +161,6 @@ export default function RegisterPage() {
                             </p>
                         </div>
 
-                        {/* Form */}
                         <form
                             onSubmit={handleRegister}
                             autoComplete="on"
@@ -205,7 +192,6 @@ export default function RegisterPage() {
                                 />
                             </div>
 
-                            {/* Email */}
                             <div className="grid gap-2">
                                 <label
                                     htmlFor="email"
@@ -231,7 +217,6 @@ export default function RegisterPage() {
                                 />
                             </div>
 
-                            {/* Password */}
                             <div className="grid gap-2">
                                 <div className="flex items-center justify-between">
                                     <label
@@ -341,14 +326,12 @@ export default function RegisterPage() {
                                 </div>
                             </div>
 
-                            {/* Error */}
                             {error && (
                                 <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
                                     {error}
                                 </div>
                             )}
 
-                            {/* Submit */}
                             <button
                                 type="submit"
                                 disabled={loading}
@@ -360,7 +343,6 @@ export default function RegisterPage() {
                             </button>
                         </form>
 
-                        {/* Login */}
                         <div className="mt-7 text-center">
                             <p className="text-sm text-slate-500">
                                 Already have an account?
@@ -377,7 +359,6 @@ export default function RegisterPage() {
                             </button>
                         </div>
 
-                        {/* Footer */}
                         <p className="mt-8 text-center text-xs leading-5 text-slate-400">
                             Your account gives you access to the
                             Less Taxi task workspace.
