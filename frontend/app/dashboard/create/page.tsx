@@ -1,39 +1,25 @@
 "use client";
-
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import api from "../../../services/api";
 
 export default function CreateTaskPage() {
     const router = useRouter();
-
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
-    const handleSubmit = async (
-        event: FormEvent<HTMLFormElement>
-    ) => {
-        event.preventDefault();
-
-        setError("");
-        setLoading(true);
-
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {event.preventDefault(); setError(""); setLoading(true);
         try {
             const token = localStorage.getItem("token");
 
-            if (!token) {
-                router.push("/");
+            if (!token) {router.push("/");
                 return;
             }
 
-            await api.post(
-                "/api/tasks",
-                {
-                    title,
-                    description,
-                },
+            await api.post("/api/tasks",
+                { title, description},
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -44,10 +30,7 @@ export default function CreateTaskPage() {
             router.push("/dashboard");
             router.refresh();
         } catch (error: any) {
-            setError(
-                error.response?.data?.message ||
-                "Failed to create task"
-            );
+            setError(error.response?.data?.message || "Failed to create task");
         } finally {
             setLoading(false);
         }
