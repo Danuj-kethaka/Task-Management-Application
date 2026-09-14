@@ -1,7 +1,7 @@
 "use client";
 
 import { useDroppable } from "@dnd-kit/core";
-import TaskCard from "../task/page";
+import TaskCard from "./TaskCard";
 
 type User = {
     _id: string;

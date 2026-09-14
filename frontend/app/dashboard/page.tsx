@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import {DndContext,DragEndEvent,PointerSensor,useSensor,useSensors,} from "@dnd-kit/core";
 import { useRouter } from "next/navigation";
 import api from "../../services/api";
-import BoardColumn from "./column/page";
+import BoardColumn from "../../components/dashboard/BoardColumn";
 
 type User = { _id: string; name: string; email: string; role?: "user" | "admin";};
 type Task = { _id: string; title: string; description: string; status: "todo" | "doing" | "done"; creator: User; assignedUser: User | null; createdAt: string;};

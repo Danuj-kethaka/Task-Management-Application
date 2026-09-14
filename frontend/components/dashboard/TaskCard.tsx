@@ -3,7 +3,7 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { useState } from "react";
-import api from "../../../services/api";
+import api from "../../services/api";
 
 type User = {
     _id: string;
