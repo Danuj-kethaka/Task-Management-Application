@@ -343,12 +343,16 @@ Admin@12345
 ## Screenshots
 
 ### Login
+![Login](screenshots/login.png)
 
 ### Registration
+![Login](screenshots/register.png)
 
 ### User Dashboard
+![Dashboard](screenshots/dashboard.png)
 
 ### Admin Dashboard
+![Login](screenshots/admin-dashboard.png)
 
 ## Repository
 
